@@ -10,13 +10,14 @@ import VideoPage from "./src/Screen/Video/Video";
 import AudioPage from "./src/Screen/Video/Audio";
 import Login from "./src/Screen/Auth/Login";
 import Register from "./src/Screen/Auth/Register";
+import BiometricAuthScreen from "./src/Screen/Printfinger/PrintFinger";
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Biometric">
         <Stack.Screen
           name="Home"
           component={HomeScreen}
@@ -71,6 +72,7 @@ const App = () => {
             headerTintColor: "#fff",
           }}
         />
+        <Stack.Screen name="Biometric" component={BiometricAuthScreen} />
         <Stack.Screen name="Video" component={VideoPage} />
         <Stack.Screen name="Audio" component={AudioPage} />
       </Stack.Navigator>

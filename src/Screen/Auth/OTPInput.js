@@ -43,11 +43,9 @@ const OTPInput = ({ navigation }) => {
       if (result && result.data === "Verified") {
         navigation.replace("Video");
       } else {
-        console.log(result.data);
       }
     } catch (error) {
       Alert.alert("Alert", `${error.message}`);
-      console.log(error.message);
     }
   };
 

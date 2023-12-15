@@ -27,7 +27,6 @@ export default function Register({ navigation }) {
     const response = await axios.post(`${baseUrl}auth/register`, userInfo, {
       headers: "Content-Type: application/json",
     });
-    console.log(response.data);
     await saveToSecureStore("accessToken", response.data.accessToken);
     await saveToSecureStore("otp", `${response.data.otp}`);
     navigation.navigate("OTPInput");
