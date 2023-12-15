@@ -2,11 +2,13 @@
 import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({ navigation, route }) => {
+  const results = route.params?.results;
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Welcome to Home Screen</Text>
       <Text style={styles.description}>This is the place to start!</Text>
+      <Text style={styles.description}>Results: {results}</Text>
       <Button
         title="Go to OTP Input"
         onPress={() => navigation.navigate("Login")}

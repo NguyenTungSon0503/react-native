@@ -46,7 +46,7 @@ export default function BiometricAuthScreen({ navigation }) {
 
       if (results.success) {
         setResult(EResult.SUCCESS);
-        navigation.navigate("Home");
+        navigation.navigate("Home", { results: "Hello from Biometric" });
       } else if (results.error === "unknown") {
         setResult(EResult.DISABLED);
       } else if (
